@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -22,19 +22,6 @@
 			</dict>
 		</array>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>222B5749-0FA6-4708-B22B-3DAB33E71C81</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -60,37 +47,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>34709347-54EB-4FA6-A674-0AFA2F554E3C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>353DF319-89FA-414E-9DAD-65D4C5A618D3</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>468D96A6-86C5-42CE-AE2B-A97951763E62</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -103,7 +64,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FC44C466-CFAE-4D74-9730-C8B620ABC80F</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -116,7 +77,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -129,33 +90,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -168,20 +103,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -194,20 +116,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>222B5749-0FA6-4708-B22B-3DAB33E71C81</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FC44C466-CFAE-4D74-9730-C8B620ABC80F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -245,31 +154,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%d</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%d' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -289,31 +180,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%b</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%b' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>FC44C466-CFAE-4D74-9730-C8B620ABC80F</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -333,31 +206,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>8478B62A-31F0-4430-9C74-C77A7E3F6D28</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%o</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%o' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -377,31 +232,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>353DF319-89FA-414E-9DAD-65D4C5A618D3</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%x</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%x' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -421,31 +258,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>07DAF941-8A9A-4E82-A968-50A770534C70</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%X</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%X' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -465,31 +284,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>7000F429-9299-4EB1-A4EB-096E941A702F</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%a</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%a' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -509,31 +310,13 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>F7235E38-767C-4A66-ABAF-F8C58490FE5F</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string>%A</string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python3 run.py '%A' "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>222B5749-0FA6-4708-B22B-3DAB33E71C81</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -553,6 +336,11 @@
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>BF98C7F4-1785-4A84-862D-D0143FC68225</string>
+			<key>variables</key>
+			<dict>
+				<key>fmt</key>
+				<string></string>
+			</dict>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -564,7 +352,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python3 run.py "$@"</string>
+				<string>[ "${use_uv:-1}" = "1" ] &amp;&amp; command -v uv &gt;/dev/null 2&gt;&amp;1 &amp;&amp; exec uv run python run.py "$fmt" "$@" || exec python3 run.py "$fmt" "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -575,7 +363,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
+			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -608,21 +396,14 @@
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>520</real>
+			<real>530</real>
 		</dict>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 		<dict>
 			<key>xpos</key>
-			<real>280</real>
+			<real>310</real>
 			<key>ypos</key>
-			<real>50</real>
-		</dict>
-		<key>222B5749-0FA6-4708-B22B-3DAB33E71C81</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>780</real>
+			<real>480</real>
 		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
@@ -631,82 +412,47 @@
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
-		<key>34709347-54EB-4FA6-A674-0AFA2F554E3C</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>390</real>
-		</dict>
 		<key>353DF319-89FA-414E-9DAD-65D4C5A618D3</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>390</real>
-		</dict>
-		<key>468D96A6-86C5-42CE-AE2B-A97951763E62</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>910</real>
+			<real>400</real>
 		</dict>
 		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>180</real>
+			<real>175</real>
 		</dict>
 		<key>7000F429-9299-4EB1-A4EB-096E941A702F</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>650</real>
+			<real>655</real>
 		</dict>
 		<key>8478B62A-31F0-4430-9C74-C77A7E3F6D28</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>260</real>
+			<real>290</real>
 		</dict>
 		<key>906DF328-FBBB-4E8C-A833-ADB71EC3E922</key>
 		<dict>
 			<key>xpos</key>
-			<real>530</real>
+			<real>540</real>
 			<key>ypos</key>
 			<real>480</real>
-		</dict>
-		<key>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>650</real>
-		</dict>
-		<key>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>520</real>
 		</dict>
 		<key>BF98C7F4-1785-4A84-862D-D0143FC68225</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>910</real>
-		</dict>
-		<key>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>260</real>
+			<real>905</real>
 		</dict>
 		<key>F7235E38-767C-4A66-ABAF-F8C58490FE5F</key>
 		<dict>
@@ -715,21 +461,31 @@
 			<key>ypos</key>
 			<real>780</real>
 		</dict>
-		<key>FC44C466-CFAE-4D74-9730-C8B620ABC80F</key>
-		<dict>
-			<key>xpos</key>
-			<real>280</real>
-			<key>ypos</key>
-			<real>180</real>
-		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Use uv instead of python3 when available</string>
+			</dict>
+			<key>description</key>
+			<string>When enabled and uv is installed, the workflow runs via uv run python.</string>
+			<key>label</key>
+			<string>Use uv</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>use_uv</string>
+		</dict>
+	</array>
 	<key>variables</key>
-	<dict>
-		<key>PYTHONPATH</key>
-		<string>./</string>
-	</dict>
+	<dict/>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
