@@ -5,8 +5,18 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml)
+[![Charter Check](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml)
 
 An Alfred workflow to generate sequential numbers and paste them to the clipboard.
+
+## Requirements
+
+- Alfred 5 (Powerpack required)
+- Python 3.9+
+
+## Installation
+
+Download the latest `.alfredworkflow` from [GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) and double-click to install.
 
 ## Usage
 
@@ -95,15 +105,6 @@ Generate multi-dimensional sequential values with a custom format string.
 | `%X` | hexadecimal upper case |
 | `%a`, `#a` | alphabetic lower case: a, b, c, ... |
 | `%A`, `#A` | alphabetic upper case: A, B, C, ... |
-
-## Requirements
-
-- Alfred 5 (Powerpack required)
-- Python 3.9+
-
-## Installation
-
-Download the latest `.alfredworkflow` from [GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) and double-click to install.
 
 ## Development
 

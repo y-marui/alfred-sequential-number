@@ -5,8 +5,18 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml)
+[![Charter Check](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml)
 
 Alfred で連番を生成してクリップボードに貼り付けるワークフロー。
+
+## Requirements
+
+- Alfred 5（Powerpack が必要）
+- Python 3.9+
+
+## Installation
+
+[GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) から最新の `.alfredworkflow` をダウンロードしてダブルクリックでインストールします。
 
 ## Usage
 
@@ -95,15 +105,6 @@ seq fmt Sample-#a-# 3 2
 | `%X` | 16進数（大文字） |
 | `%a`, `#a` | アルファベット（小文字）: a, b, c, ... |
 | `%A`, `#A` | アルファベット（大文字）: A, B, C, ... |
-
-## Requirements
-
-- Alfred 5（Powerpack が必要）
-- Python 3.9+
-
-## Installation
-
-[GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) から最新の `.alfredworkflow` をダウンロードしてダブルクリックでインストールします。
 
 ## Development
 
