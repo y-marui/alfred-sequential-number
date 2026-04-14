@@ -1,29 +1,22 @@
 """Application orchestrator.
 
-Wires together the Router and Command handlers.
-This is the single entry point called by scripts/entry.py.
-
-To add a new command:
-  1. Create src/app/commands/my_command.py with a handle(args: str) -> None
-  2. Register it below with router.register("my_command")
+Note: Alfred invokes seq.py directly via inline scripts in info.plist.
+This module provides programmatic access to the same logic for testing.
 """
 
 from __future__ import annotations
 
-from alfred.router import Router
-from app.commands import config_cmd, help_cmd, open_cmd, search
-
-router = Router(default="search")
-router.register("search")(search.handle)
-router.register("open")(open_cmd.handle)
-router.register("config")(config_cmd.handle)
-router.register("help")(help_cmd.handle)
+from app.commands import seq_cmd
 
 
-def run(query: str) -> None:
-    """Main application entry point.
+def generate(subcommand: str, args: list[str]) -> list[str]:
+    """Generate sequential numbers.
 
     Args:
-        query: Raw query string from Alfred (e.g. "search foo bar").
+        subcommand: Format variant ('bin', 'oct', 'hex', 'Hex', 'alf', 'Alf', 'fmt', or '').
+        args: Range/length tokens.
+
+    Returns:
+        List of generated strings.
     """
-    router.dispatch(query)
+    return seq_cmd.generate(subcommand, args)
