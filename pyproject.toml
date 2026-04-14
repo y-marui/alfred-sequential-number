@@ -1,7 +1,7 @@
 [project]
-name = "alfred-workflow-template"
-version = "0.1.0"
-description = "Alfred Workflow development template"
+name = "alfred-sequential-number"
+version = "1.0.0"
+description = "Alfred workflow to generate sequential numbers"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
@@ -9,10 +9,10 @@ license = { text = "MIT" }
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/yourname/alfred-workflow-template"
-Repository = "https://github.com/yourname/alfred-workflow-template"
-"Bug Tracker" = "https://github.com/yourname/alfred-workflow-template/issues"
-Changelog = "https://github.com/yourname/alfred-workflow-template/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/y-marui/alfred-sequential-number"
+Repository = "https://github.com/y-marui/alfred-sequential-number"
+"Bug Tracker" = "https://github.com/y-marui/alfred-sequential-number/issues"
+Changelog = "https://github.com/y-marui/alfred-sequential-number/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [
@@ -64,7 +64,11 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["ANN", "ARG"]
+"tests/**" = ["ANN", "ARG", "N802"]
+# seq.py is ported from the reference implementation; keep names as-is
+"workflow/seq.py" = ["N801", "N802", "ANN001", "ANN201", "ANN002", "UP028"]
+# filter.py catches broad exceptions from seq.py which has no typed errors
+"workflow/filter.py" = ["BLE001"]
 
 # ---------------------------------------------------------------------------
 # Ruff formatter (replaces black)
@@ -87,7 +91,7 @@ strict = true
 # Add entries here when vendoring a library that has no type stubs.
 [[tool.mypy.overrides]]
 module = [
-    # Example: "requests.*",
+    "seq",
 ]
 ignore_missing_imports = true
 
