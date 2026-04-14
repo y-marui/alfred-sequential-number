@@ -50,7 +50,8 @@ def generate(subcommand: str, args: list[str]) -> list[str]:
     if subcommand == "fmt":
         if not args:
             return []
-        fmt, narr = args[0], args[1:]
+        narr = args[:1]
+        fmt = args[1] if len(args) > 1 else "item-#"
         return list(loader(fmt, narr))
 
     fmt = _FORMAT_MAP.get(subcommand, "%d")

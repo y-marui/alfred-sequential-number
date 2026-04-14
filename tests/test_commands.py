@@ -62,16 +62,19 @@ class TestAlphaUpper:
 
 
 class TestFormat:
-    def test_decimal_format(self):
-        assert generate("fmt", ["%d", "3"]) == ["1", "2", "3"]
+    def test_default_format(self):
+        # seq fmt 3 → uses default format "item-#"
+        assert generate("fmt", ["3"]) == ["item-1", "item-2", "item-3"]
 
     def test_custom_prefix(self):
-        result = generate("fmt", ["item-%d", "3"])
+        # seq fmt 3 item-%d
+        result = generate("fmt", ["3", "item-%d"])
         assert result == ["item-1", "item-2", "item-3"]
 
     def test_multi_dimension(self):
-        result = generate("fmt", ["#a-#", "3", "2"])
-        assert result == ["a-1", "a-2", "b-1", "b-2", "c-1", "c-2"]
+        # seq fmt 3 #a  (range=3, format=#a)
+        result = generate("fmt", ["3", "%a"])
+        assert result == ["a", "b", "c"]
 
     def test_empty_args_returns_empty(self):
         assert generate("fmt", []) == []

@@ -67,6 +67,8 @@ ignore = [
 "tests/**" = ["ANN", "ARG", "N802"]
 # seq.py is ported from the reference implementation; keep names as-is
 "workflow/seq.py" = ["N801", "N802", "ANN001", "ANN201", "ANN002", "UP028"]
+# filter.py catches broad exceptions from seq.py which has no typed errors
+"workflow/filter.py" = ["BLE001"]
 
 # ---------------------------------------------------------------------------
 # Ruff formatter (replaces black)

@@ -8,115 +8,11 @@
 	<string>Tools &amp; Utilities</string>
 	<key>connections</key>
 	<dict>
-		<key>07DAF941-8A9A-4E82-A968-50A770534C70</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>353DF319-89FA-414E-9DAD-65D4C5A618D3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>7000F429-9299-4EB1-A4EB-096E941A702F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>8478B62A-31F0-4430-9C74-C77A7E3F6D28</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BF98C7F4-1785-4A84-862D-D0143FC68225</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>F7235E38-767C-4A66-ABAF-F8C58490FE5F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+				<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -139,233 +35,47 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultssubtext</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>seq</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%d</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq bin</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in binary</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%b</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq oct</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in octal</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8478B62A-31F0-4430-9C74-C77A7E3F6D28</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%o</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq hex</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in hexadecimal with lower case</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>353DF319-89FA-414E-9DAD-65D4C5A618D3</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%x</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq Hex</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in hexadecimal with upper case</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>07DAF941-8A9A-4E82-A968-50A770534C70</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%X</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq alf</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in alphabetic with lower case</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>7000F429-9299-4EB1-A4EB-096E941A702F</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%a</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq Alf</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in alphabetic with upper case</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>F7235E38-767C-4A66-ABAF-F8C58490FE5F</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string>%A</string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>seq fmt</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Paste Sequential Number in format</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BF98C7F4-1785-4A84-862D-D0143FC68225</string>
-			<key>variables</key>
-			<dict>
-				<key>fmt</key>
-				<string></string>
-			</dict>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
+				<key>queuedelay</key>
+				<integer>3</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Generating...</string>
 				<key>script</key>
-				<string>[ "${use_uv:-1}" = "1" ] &amp;&amp; command -v uv &gt;/dev/null 2&gt;&amp;1 &amp;&amp; exec uv run python run.py "$fmt" "$@" || exec python3 run.py "$fmt" "$@"</string>
+				<string>[ "${use_uv:-1}" = "1" ] &amp;&amp; command -v uv &gt;/dev/null 2&gt;&amp;1 &amp;&amp; exec uv run python filter.py "$@" || exec python3 filter.py "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<false/>
+				<key>subtext</key>
+				<string>seq [bin|oct|hex|Hex|alf|Alf|fmt] &lt;length or range&gt;</string>
+				<key>title</key>
+				<string>Paste Sequential Number</string>
 				<key>type</key>
 				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<key>variables</key>
+			<dict/>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -391,20 +101,6 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>07DAF941-8A9A-4E82-A968-50A770534C70</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>530</real>
-		</dict>
-		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
-		<dict>
-			<key>xpos</key>
-			<real>310</real>
-			<key>ypos</key>
-			<real>480</real>
-		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
 			<key>xpos</key>
@@ -412,54 +108,12 @@
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
-		<key>353DF319-89FA-414E-9DAD-65D4C5A618D3</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>400</real>
-		</dict>
-		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>175</real>
-		</dict>
-		<key>7000F429-9299-4EB1-A4EB-096E941A702F</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>655</real>
-		</dict>
-		<key>8478B62A-31F0-4430-9C74-C77A7E3F6D28</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>290</real>
-		</dict>
 		<key>906DF328-FBBB-4E8C-A833-ADB71EC3E922</key>
 		<dict>
 			<key>xpos</key>
-			<real>540</real>
+			<real>310</real>
 			<key>ypos</key>
-			<real>480</real>
-		</dict>
-		<key>BF98C7F4-1785-4A84-862D-D0143FC68225</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>905</real>
-		</dict>
-		<key>F7235E38-767C-4A66-ABAF-F8C58490FE5F</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>780</real>
+			<real>50</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
