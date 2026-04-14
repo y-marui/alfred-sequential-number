@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8EF9950B-D2FD-4838-AC2D-367447D62812</string>
+				<string>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -51,7 +51,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>429D481C-8A73-4231-9D15-47CFEFC7C26F</string>
+				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -77,33 +77,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>52450DD2-FCB0-4D42-B1A8-F0A2F31F3BB9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>41C10434-FBC4-4F45-80B5-D7E6E35ACE8C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>429D481C-8A73-4231-9D15-47CFEFC7C26F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+				<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -125,7 +99,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>495E517E-DCA5-4A12-BD97-620E6E16E064</key>
+		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -138,72 +112,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4C6D367B-6A34-4F5E-8490-6E92ECCE73C0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>222B5749-0FA6-4708-B22B-3DAB33E71C81</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>52450DD2-FCB0-4D42-B1A8-F0A2F31F3BB9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>495E517E-DCA5-4A12-BD97-620E6E16E064</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>7000F429-9299-4EB1-A4EB-096E941A702F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7EBC4680-0C2D-450F-854B-43AA928D59D6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>74815169-68BB-4236-92F9-4B361E29DAE1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8D90E9E0-4BE8-4521-A73C-95E04CDBF8ED</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>7EBC4680-0C2D-450F-854B-43AA928D59D6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -220,33 +129,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>41C10434-FBC4-4F45-80B5-D7E6E35ACE8C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>8D90E9E0-4BE8-4521-A73C-95E04CDBF8ED</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>8EF9950B-D2FD-4838-AC2D-367447D62812</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</string>
+				<string>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -285,7 +168,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>74815169-68BB-4236-92F9-4B361E29DAE1</string>
+				<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -311,7 +194,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4C6D367B-6A34-4F5E-8490-6E92ECCE73C0</string>
+				<string>222B5749-0FA6-4708-B22B-3DAB33E71C81</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -347,32 +230,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%d", sys.argv[1:2]))))</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
@@ -394,47 +251,23 @@ sys.stdout.write("\r\n".join(list(loader("%d", sys.argv[1:2]))))</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>429D481C-8A73-4231-9D15-47CFEFC7C26F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%b", sys.argv[1:2]))))</string>
+				<string>python3 run.py '%d' "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FC44C466-CFAE-4D74-9730-C8B620ABC80F</string>
+			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -462,23 +295,25 @@ sys.stdout.write("\r\n".join(list(loader("%b", sys.argv[1:2]))))</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>python3 run.py '%b' "$@"</string>
+				<key>scriptargtype</key>
 				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>495E517E-DCA5-4A12-BD97-620E6E16E064</string>
+			<string>FC44C466-CFAE-4D74-9730-C8B620ABC80F</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -507,70 +342,20 @@ sys.stdout.write("\r\n".join(list(loader("%b", sys.argv[1:2]))))</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%o", sys.argv[1:2]))))</string>
+				<string>python3 run.py '%o' "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>41C10434-FBC4-4F45-80B5-D7E6E35ACE8C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%x", sys.argv[1:2]))))</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -598,42 +383,25 @@ sys.stdout.write("\r\n".join(list(loader("%x", sys.argv[1:2]))))</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>python3 run.py '%x' "$@"</string>
+				<key>scriptargtype</key>
 				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>52450DD2-FCB0-4D42-B1A8-F0A2F31F3BB9</string>
+			<string>34709347-54EB-4FA6-A674-0AFA2F554E3C</string>
 			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
-			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -662,18 +430,15 @@ sys.stdout.write("\r\n".join(list(loader("%x", sys.argv[1:2]))))</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%X", sys.argv[1:2]))))</string>
+				<string>python3 run.py '%X' "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -681,27 +446,6 @@ sys.stdout.write("\r\n".join(list(loader("%X", sys.argv[1:2]))))</string>
 			<string>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>8EF9950B-D2FD-4838-AC2D-367447D62812</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -730,18 +474,15 @@ sys.stdout.write("\r\n".join(list(loader("%X", sys.argv[1:2]))))</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%a", sys.argv[1:2]))))</string>
+				<string>python3 run.py '%a' "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -749,27 +490,6 @@ sys.stdout.write("\r\n".join(list(loader("%a", sys.argv[1:2]))))</string>
 			<string>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>7EBC4680-0C2D-450F-854B-43AA928D59D6</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -798,70 +518,20 @@ sys.stdout.write("\r\n".join(list(loader("%a", sys.argv[1:2]))))</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader("%A", sys.argv[1:2]))))</string>
+				<string>python3 run.py '%A' "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>222B5749-0FA6-4708-B22B-3DAB33E71C81</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>4C6D367B-6A34-4F5E-8490-6E92ECCE73C0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import sys
-from seq import loader
-
-sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>9</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -889,8 +559,31 @@ sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
+				<key>concurrently</key>
 				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>python3 run.py "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>468D96A6-86C5-42CE-AE2B-A97951763E62</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>ignoredynamicplaceholders</key>
@@ -901,30 +594,9 @@ sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>74815169-68BB-4236-92F9-4B361E29DAE1</string>
+			<string>906DF328-FBBB-4E8C-A833-ADB71EC3E922</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>delimiter</key>
-				<string> </string>
-				<key>discardemptyarguments</key>
-				<true/>
-				<key>outputas</key>
-				<integer>1</integer>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>8D90E9E0-4BE8-4521-A73C-95E04CDBF8ED</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -936,21 +608,21 @@ sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>520</real>
 		</dict>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
 		<key>222B5749-0FA6-4708-B22B-3DAB33E71C81</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>895</real>
+			<real>780</real>
 		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
@@ -962,156 +634,93 @@ sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
 		<key>34709347-54EB-4FA6-A674-0AFA2F554E3C</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>465</real>
+			<real>390</real>
 		</dict>
 		<key>353DF319-89FA-414E-9DAD-65D4C5A618D3</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>465</real>
-		</dict>
-		<key>41C10434-FBC4-4F45-80B5-D7E6E35ACE8C</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>365</real>
-		</dict>
-		<key>429D481C-8A73-4231-9D15-47CFEFC7C26F</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>80</real>
+			<real>390</real>
 		</dict>
 		<key>468D96A6-86C5-42CE-AE2B-A97951763E62</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>1055</real>
-		</dict>
-		<key>495E517E-DCA5-4A12-BD97-620E6E16E064</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>220</real>
-		</dict>
-		<key>4C6D367B-6A34-4F5E-8490-6E92ECCE73C0</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>925</real>
-		</dict>
-		<key>52450DD2-FCB0-4D42-B1A8-F0A2F31F3BB9</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>495</real>
+			<real>910</real>
 		</dict>
 		<key>5E3C6E08-F039-40A3-93BB-AA41A4B62AFA</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>180</real>
 		</dict>
 		<key>7000F429-9299-4EB1-A4EB-096E941A702F</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>750</real>
-		</dict>
-		<key>74815169-68BB-4236-92F9-4B361E29DAE1</key>
-		<dict>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>1055</real>
-		</dict>
-		<key>7EBC4680-0C2D-450F-854B-43AA928D59D6</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>780</real>
+			<real>650</real>
 		</dict>
 		<key>8478B62A-31F0-4430-9C74-C77A7E3F6D28</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>335</real>
-		</dict>
-		<key>8D90E9E0-4BE8-4521-A73C-95E04CDBF8ED</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>1085</real>
-		</dict>
-		<key>8EF9950B-D2FD-4838-AC2D-367447D62812</key>
-		<dict>
-			<key>xpos</key>
-			<real>420</real>
-			<key>ypos</key>
-			<real>640</real>
+			<real>260</real>
 		</dict>
 		<key>906DF328-FBBB-4E8C-A833-ADB71EC3E922</key>
 		<dict>
 			<key>xpos</key>
-			<real>745</real>
+			<real>530</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>480</real>
 		</dict>
 		<key>A26F63CF-AF4B-46E8-AB06-CAA7B84751A9</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>750</real>
+			<real>650</real>
 		</dict>
 		<key>AF41BE79-1AD4-45F3-B4B7-F62F9E80DFEB</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>520</real>
 		</dict>
 		<key>BF98C7F4-1785-4A84-862D-D0143FC68225</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1055</real>
+			<real>910</real>
 		</dict>
 		<key>F7031DAD-0158-4C7C-AD57-1C7BBAE3F45E</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>335</real>
+			<real>260</real>
 		</dict>
 		<key>F7235E38-767C-4A66-ABAF-F8C58490FE5F</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>895</real>
+			<real>780</real>
 		</dict>
 		<key>FC44C466-CFAE-4D74-9730-C8B620ABC80F</key>
 		<dict>
 			<key>xpos</key>
-			<real>515</real>
+			<real>280</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>180</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -1124,7 +733,7 @@ sys.stdout.write("\r\n".join(list(loader(sys.argv[1], sys.argv[2:]))))</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/y-marui/alfred-sequential-number</string>
 </dict>
