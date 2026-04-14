@@ -97,7 +97,7 @@ vendor:
 build: vendor
 	./scripts/build.sh
 
-deploy: build
+deploy: clean build
 	@open dist/*.alfredworkflow
 
 release:
