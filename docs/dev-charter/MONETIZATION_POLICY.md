@@ -50,7 +50,7 @@ buy_me_a_coffee: [USERNAME]
 サイズはデフォルト値を維持し、特別な事情がない限り変更しない。
 
 ```html
-<a href="https://www.buymeacoffee.com/y-marui" target="_blank">
+<a href="https://www.buymeacoffee.com/y.marui" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
        alt="Buy Me A Coffee"
        style="height: 60px !important;width: 217px !important;">
@@ -64,7 +64,7 @@ buy_me_a_coffee: [USERNAME]
 ```html
 <script data-name="BMC-Widget" data-cfasync="false"
   src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-  data-id="y-marui"
+  data-id="y.marui"
   data-description="Support me on Buy me a coffee!"
   data-message=""
   data-color="#FF813F"
