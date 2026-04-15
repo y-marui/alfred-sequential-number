@@ -123,7 +123,7 @@ MIT — [LICENSE](LICENSE) を参照
 
 このワークフローが役に立ったら、サポートしていただけると嬉しいです。
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-y--marui-FFDD00?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/y-marui)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-y.marui-FFDD00?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/y.marui)
 
 ---
 
