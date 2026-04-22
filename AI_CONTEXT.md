@@ -6,6 +6,21 @@
 
 ---
 
+## Reference Order
+
+AI はタスク開始時に以下の順で参照する:
+
+1. README.md（概要・セットアップ）
+2. CONTRIBUTING.md（開発フロー・命名規則・レビューチェックリスト）
+
+必要に応じて以下を参照する（順不同）:
+- docs/architecture.md（モジュール・コンポーネント構造）
+- docs/file-map.md（ファイルレベルの依存関係 ※情報が足りない・古い場合は適宜探索し、追記・更新する）
+- docs/specification.md（機能仕様・データフロー）
+- docs/ui-design.md（UI 設計・コンポーネント仕様）
+
+---
+
 ## Project Overview
 
 Alfred 5 Script Filter ワークフロー用の OSS テンプレート。
