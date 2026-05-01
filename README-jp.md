@@ -6,6 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml)
 [![Charter Check](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/dev-charter-check.yml)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/y-marui?style=social)](https://github.com/sponsors/y-marui)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-yellow.svg)](https://www.buymeacoffee.com/y.marui)
 
 Alfred で連番を生成してクリップボードに貼り付けるワークフロー。
 
@@ -118,12 +120,6 @@ make build      # dist/*.alfredworkflow を生成
 ## License
 
 MIT — [LICENSE](LICENSE) を参照
-
-## Support
-
-このワークフローが役に立ったら、サポートしていただけると嬉しいです。
-
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-y.marui-FFDD00?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/y.marui)
 
 ---
 
