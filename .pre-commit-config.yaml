@@ -9,7 +9,7 @@ repos:
 
   # General file hygiene + security basics
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -23,14 +23,14 @@ repos:
 
   # Shell script linting
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+    rev: v0.11.0.1
     hooks:
       - id: shellcheck
         files: scripts/.*\.sh$
 
   # Secret scanning — uses .gitleaks.toml for project-specific rules
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.4
+    rev: v8.30.1
     hooks:
       - id: gitleaks
         args: [--config=.gitleaks.toml]
@@ -43,6 +43,15 @@ repos:
         language: fail
         entry: ".env files must not be committed"
         files: '^\.env(\..+)?$'
+
+  # Markdown section heading language (English required, even in Japanese docs)
+  - repo: local
+    hooks:
+      - id: check-markdown-heading-language
+        name: Check Markdown section heading language
+        language: script
+        entry: scripts/check-markdown-heading-language.sh
+        files: '\.md$'
 
   # Type checking (runs mypy against src/)
   # language: python → pre-commit manages its own isolated venv for mypy,

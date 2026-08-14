@@ -7,7 +7,7 @@ decimal / binary / octal / hex / alphabetic / カスタムフォーマットの 
 
 ## Commands
 
-### デフォルト（decimal）
+### Default (decimal)
 
 ```
 seq <length or range>
@@ -15,7 +15,7 @@ seq <N>        → 1 〜 N の整数列
 seq <S>-<E>   → S 〜 E の整数列
 ```
 
-### サブコマンド
+### Subcommands
 
 | サブコマンド | フォーマット指定子 | 出力例（seq X 4） |
 |---|---|---|
@@ -27,11 +27,11 @@ seq <S>-<E>   → S 〜 E の整数列
 | `Alf` | `%A` | A, B, C, D |
 | `fmt` | 任意 | （カスタム） |
 
-### ダブルスペースモード
+### Double-Space Mode
 
 `seq ` の後にスペースを入力すると全フォーマットのプレビューを同時表示する。
 
-### カスタムフォーマット（`seq fmt`）
+### Custom Format (`seq fmt`)
 
 ```
 seq fmt <range> [<format>]

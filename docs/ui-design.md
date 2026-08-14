@@ -7,7 +7,7 @@ Alfred Sequential Number は Alfred 5 の Script Filter / Run Script を使用�
 
 Script Filter が返す JSON アイテムの仕様。
 
-### 通常アイテム
+### Normal Item
 
 ```json
 {
@@ -24,7 +24,7 @@ Script Filter が返す JSON アイテムの仕様。
 | `subtitle` | フォーマット説明文 |
 | `arg` | `\r\n` 区切りの全数列（Run Script がクリップボードへペースト、Alfred の仕様により CRLF を使用） |
 
-### エラー・プレースホルダーアイテム
+### Error / Placeholder Item
 
 ```json
 {
@@ -34,7 +34,7 @@ Script Filter が返す JSON アイテムの仕様。
 }
 ```
 
-## UI ガイドライン
+## UI Guidelines
 
 - `title` / `subtitle` に Unicode 絵文字を使用しない（AI_CONTEXT.md の UI ガイドライン参照）
 - アイコンは `workflow/icon.png` で制御する
