@@ -14,7 +14,7 @@ Alfred で連番を生成してクリップボードに貼り付けるワーク�
 ## Requirements
 
 - Alfred 5（Powerpack が必要）
-- Python 3.9+
+- Go（ビルド時のみ、`go.mod` を参照）
 
 ## Installation
 
@@ -89,12 +89,14 @@ seq Alf 27
 
 ### `seq fmt`
 ```
-seq fmt <フォーマット> <長さ または 範囲> [<長さ または 範囲> ...]
+seq fmt <長さ または 範囲> [<フォーマット>]
 
-seq fmt Sample-#a-# 3 2
->>> Sample-a-1 Sample-a-2 Sample-b-1 Sample-b-2 Sample-c-1 Sample-c-2
+seq fmt 3
+>>> item-1 item-2 item-3
+seq fmt 3 Sample-#a
+>>> Sample-a Sample-b Sample-c
 ```
-カスタムフォーマットで多次元の連番を生成します。
+カスタムフォーマット文字列で連番を生成します（デフォルトフォーマット: `item-#`）。
 
 #### Format specifiers
 
@@ -111,10 +113,22 @@ seq fmt Sample-#a-# 3 2
 ## Development
 
 ```bash
-make install    # 開発用依存関係をインストール
-make test       # テスト実行
-make lint       # ruff チェック
-make build      # dist/*.alfredworkflow を生成
+make test            # テスト実行
+make lint             # gofmt -l + go vet
+make build-workflow   # dist/*.alfredworkflow を生成
+```
+
+## Project Structure
+
+```
+alfred-sequential-number/
+├── cmd/
+│   └── sequential-number-alfred/  # Alfred が実行するバイナリ
+├── internal/
+│   ├── seq/             # 連番生成ロジック（コア）
+│   ├── seqcmd/           # クエリディスパッチ・フォーマット/サブコマンドルーティング
+│   └── scriptfilter/    # Alfred Script Filter JSON 型
+└── workflow/             # Alfred パッケージ（info.plist, icon.png）
 ```
 
 ## License

@@ -1,12 +1,12 @@
-repos:
-  # Ruff: fast linter + formatter (replaces flake8, isort, pyupgrade, etc.)
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.7
-    hooks:
-      - id: ruff
-        args: [--fix]
-      - id: ruff-format
+exclude: |
+  (?x)^(
+    \.git/|
+    dist/|
+    \.build/|
+    go\.sum$
+  )
 
+repos:
   # General file hygiene + security basics
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -44,28 +44,40 @@ repos:
         entry: ".env files must not be committed"
         files: '^\.env(\..+)?$'
 
-  # Markdown section heading language (English required, even in Japanese docs)
+  # Markdown section headings must be written in English (see docs/dev-charter/LANGUAGE_POLICY.md)
   - repo: local
     hooks:
       - id: check-markdown-heading-language
-        name: Check Markdown section heading language
+        name: check markdown section heading language
         language: script
         entry: scripts/check-markdown-heading-language.sh
-        files: '\.md$'
+        files: \.md$
+        exclude: ^docs/dev-charter/
 
-  # Type checking (runs mypy against src/)
-  # language: python → pre-commit manages its own isolated venv for mypy,
-  # so it works regardless of whether the project uses uv or global pip.
+  # ----------------------------------------------------------------
+  # Go (repository-specific; not part of the shared dev-charter set)
+  # ----------------------------------------------------------------
   - repo: local
     hooks:
-      - id: mypy
-        name: mypy
-        language: python
-        entry: mypy
-        args: [src]
-        types: [python]
+      - id: gofmt
+        name: gofmt
+        language: system
+        entry: >-
+          bash -c '
+          out=$(gofmt -l "$@");
+          if [ -n "$out" ]; then
+          echo "gofmt needs to be run on:";
+          echo "$out";
+          exit 1;
+          fi
+          ' --
+        types: [go]
+      - id: go-vet
+        name: go vet
+        language: system
+        entry: bash -c 'go vet ./...'
+        types: [go]
         pass_filenames: false
-        additional_dependencies: ["mypy>=1.9"]
 
   # ----------------------------------------------------------------
   # Charter CI template check
@@ -99,7 +111,8 @@ repos:
   # ----------------------------------------------------------------
   # Block commits on the default branch
   # (server-side Ruleset only stops direct pushes; this catches local
-  # commits onto main/master before that point — see SECURITY_POLICY.md)
+  # commits onto main/master before that point — see CI_POLICY.md
+  # Branch Protection (Ruleset))
   # ----------------------------------------------------------------
   - repo: local
     hooks:
@@ -178,7 +191,8 @@ repos:
 
   # ----------------------------------------------------------------
   # Python package management (topics/PYTHON_DEV_ENV.md)
-  # (blocks vendor-requirements.txt / missing uv.lock when pyproject.toml exists)
+  # (blocks vendor-requirements.txt / missing uv.lock when pyproject.toml
+  # exists; a no-op here since this project has no pyproject.toml)
   # ----------------------------------------------------------------
   - repo: local
     hooks:

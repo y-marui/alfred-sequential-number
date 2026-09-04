@@ -14,7 +14,7 @@ An Alfred workflow to generate sequential numbers and paste them to the clipboar
 ## Requirements
 
 - Alfred 5 (Powerpack required)
-- Python 3.9+
+- Go (build-time only, see `go.mod`)
 
 ## Installation
 
@@ -89,12 +89,14 @@ Generate sequential numbers alphabetically (upper case).
 
 ### `seq fmt`
 ```
-seq fmt <format> <length or range> [<length or range> ...]
+seq fmt <length or range> [<format>]
 
-seq fmt Sample-#a-# 3 2
->>> Sample-a-1 Sample-a-2 Sample-b-1 Sample-b-2 Sample-c-1 Sample-c-2
+seq fmt 3
+>>> item-1 item-2 item-3
+seq fmt 3 Sample-#a
+>>> Sample-a Sample-b Sample-c
 ```
-Generate multi-dimensional sequential values with a custom format string.
+Generate sequential values with a custom format string (default format: `item-#`).
 
 #### Format specifiers
 
@@ -111,10 +113,22 @@ Generate multi-dimensional sequential values with a custom format string.
 ## Development
 
 ```bash
-make install    # install dev dependencies
-make test       # run tests
-make lint       # ruff check
-make build      # build dist/*.alfredworkflow
+make test            # run tests
+make lint             # gofmt -l + go vet
+make build-workflow   # build dist/*.alfredworkflow
+```
+
+## Project Structure
+
+```
+alfred-sequential-number/
+├── cmd/
+│   └── sequential-number-alfred/  # The binary Alfred invokes
+├── internal/
+│   ├── seq/             # Sequence generation logic (core)
+│   ├── seqcmd/           # Query dispatch, format/subcommand routing
+│   └── scriptfilter/    # Alfred Script Filter JSON types
+└── workflow/             # Alfred package (info.plist, icon.png)
 ```
 
 ## License

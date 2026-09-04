@@ -1,41 +1,85 @@
 # UI Design
 
-Alfred Sequential Number は Alfred 5 の Script Filter / Run Script を使用するワークフローであり、
-独自の UI コンポーネントを持たない。Alfred 自身が UI を制御する。
+Alfred Script Filter workflows present results as a list of items in the Alfred
+launcher. This document defines the UI conventions for result items in this workflow.
 
-## Alfred Script Filter Items
+## Result Item Structure
 
-Script Filter が返す JSON アイテムの仕様。
+Alfred result items are JSON objects with the following fields used in this workflow:
 
-### Normal Item
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `title` | string | yes | Primary text (large, always visible) — a preview of the generated sequence |
+| `subtitle` | string | no | Secondary text (small, below title) — the format description |
+| `arg` | string | no | The full sequence, `\r\n`-joined; copied to clipboard on Enter |
+| `valid` | bool | yes | If false, Enter does not trigger an action |
 
-```json
-{
-  "title": "1, 2, 3, ..., 10",
-  "subtitle": "Paste Sequential Numbers (decimal)",
-  "arg": "1\r\n2\r\n3\r\n...\r\n10",
-  "valid": true
-}
-```
+## Text Guidelines
 
-| フィールド | 内容 |
+### No Unicode Emoji in `title` / `subtitle`
+
+- **Prohibited:** `🔍 Search`, `✅ Done`, `📄 Document`
+- **Allowed:** ASCII symbols — `>`, `*`, `[x]`, `(!)`, `--`
+- **Reason:** Emoji rendering is inconsistent across Alfred versions and macOS
+  updates. ASCII symbols are universally stable.
+
+### Preview Truncation (`title`)
+
+- 5 or fewer values: joined with `", "` (e.g. `1, 2, 3, 4, 5`).
+- More than 5 values: first 3 plus the last, joined with `", ..., "`
+  (e.g. `1, 2, 3, ..., 10`).
+
+### Empty / Error States
+
+- `seq fmt` with no range → a placeholder item, `title: "Enter a length or range"`,
+  `valid: false`, to guide the user.
+- No results (invalid pattern/range) → `title: "No results"`, `subtitle: <format
+  description>`, `valid: false`.
+- Unexpected internal error → `cmd/sequential-number-alfred`'s panic recovery
+  automatically shows a `"Workflow Error"` item; do not hide errors silently.
+
+## Icon
+
+- Workflow icon: `workflow/icon.png` (PNG, any size — Alfred scales it).
+- Alfred controls light/dark mode; do not ship separate light/dark icons.
+- No per-item icons are used in this workflow.
+
+## Keyboard Shortcuts
+
+These are standard Alfred behaviors — do not override them in the workflow:
+
+| Key | Action |
 |---|---|
-| `title` | 数列プレビュー（5要素以下はそのまま、超過時は "1, 2, 3, ..., N" 形式） |
-| `subtitle` | フォーマット説明文 |
-| `arg` | `\r\n` 区切りの全数列（Run Script がクリップボードへペースト、Alfred の仕様により CRLF を使用） |
+| ↩ Enter | Copy `arg` to clipboard and paste |
+| ⌘C | Copy `arg` to clipboard |
+| ⌘L | Show `title` in Large Type |
 
-### Error / Placeholder Item
+## Layout Conventions
 
-```json
-{
-  "title": "No results",
-  "subtitle": "Paste Sequential Numbers (decimal)",
-  "valid": false
-}
+### Normal result (decimal/bin/oct/hex/Hex/alf/Alf/fmt)
+
+```
+title:    <preview, e.g. "1, 2, 3, ..., 10">
+subtitle: <format description, e.g. "Paste Sequential Numbers (decimal)">
+arg:      <full sequence, \r\n-joined>
+valid:    true
 ```
 
-## UI Guidelines
+### Leading-space "preview every format" mode
 
-- `title` / `subtitle` に Unicode 絵文字を使用しない（AI_CONTEXT.md の UI ガイドライン参照）
-- アイコンは `workflow/icon.png` で制御する
-- 外観モード（ライト/ダーク）は Alfred が制御するため、ワークフロー側での対応は不要
+One item per registered format, each labeled with its subcommand keyword:
+
+```
+title:    <preview for that format>
+subtitle: <subcommand>: <format description>   (e.g. "bin: Paste Sequential Numbers (binary)")
+arg:      <full sequence for that format>
+valid:    true
+```
+
+### Placeholder / error items
+
+```
+title:    "Enter a length or range" | "No results" | "Workflow Error"
+subtitle: <format description, or the error message>
+valid:    false
+```
