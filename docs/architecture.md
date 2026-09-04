@@ -2,138 +2,81 @@
 
 ## Overview
 
-This workflow uses a layered architecture to keep Alfred-specific code isolated
-from business logic, making it easy to test and extend.
+An Alfred Workflow (Go): `cmd/sequential-number-alfred` is the single universal
+(amd64+arm64) binary `workflow/info.plist` invokes. Its Script Filter node passes the
+query following the `seq` keyword as `$1`; the binary parses it, generates a sequence
+via `internal/seq`, and prints Alfred Script Filter JSON via `internal/scriptfilter`.
+Selecting the result copies the sequence to the clipboard and pastes it through
+Alfred's own native Clipboard Output node — no script is involved in that step; see
+[docs/specification.md](specification.md) for the full data flow.
+`scripts/build-workflow.sh` packages the binary with `workflow/info.plist` and
+`workflow/icon.png` into a `.alfredworkflow`.
 
-```
-Alfred
-  │  keyword + query
-  ▼
-workflow/scripts/entry.py       ← Alfred boundary (UI layer)
-  │
-  ▼
-src/alfred/safe_run.py          ← Exception safety wrapper
-  │
-  ▼
-src/app/core.py                 ← Application orchestrator
-  │
-  ▼
-src/alfred/router.py            ← Command dispatcher
-  │
-  ├─ search  → src/app/commands/search.py
-  ├─ open    → src/app/commands/open_cmd.py
-  ├─ config  → src/app/commands/config_cmd.py
-  └─ help    → src/app/commands/help_cmd.py
-                │
-                ▼
-            src/app/services/   ← Business logic + caching
-                │
-                ▼
-            src/app/clients/    ← External API / IO
-```
+This structure — a thin `cmd/` entry point over independently testable `internal/`
+packages, no generic command-router abstraction, Script Filter JSON via a small
+`scriptfilter` package — deliberately matches
+[y-marui/alfred-clean-invisible-text](https://github.com/y-marui/alfred-clean-invisible-text),
+[y-marui/alfred-markdown-ref](https://github.com/y-marui/alfred-markdown-ref), and
+[y-marui/alfred-password-generator](https://github.com/y-marui/alfred-password-generator),
+this author's other Alfred Workflows already implemented in Go. This workflow itself
+was originally a Python implementation (`src/alfred`/`src/app`); see `CHANGELOG.md`'s
+`[Unreleased]` entry for what changed and why in that rewrite.
 
-## Layers
+## Entry Points
 
-### UI Layer (`workflow/`)
+- `cmd/sequential-number-alfred` — a single command, no subcommands. The query it
+  receives (e.g. `"10"`, `"bin 10"`, `"fmt 3 item-%d"`, `" 12"`) determines behavior; see
+  [docs/specification.md](specification.md#commands).
 
-- `scripts/entry.py`: The only file Alfred executes directly.
-  - Sets up `sys.path` (vendor + src)
-  - Calls `safe_run(main)`
-  - No business logic here
+One Alfred trigger reaches it: the `seq` keyword, wired in `workflow/info.plist`.
 
-### Alfred SDK (`src/alfred/`)
+## Directory Structure
 
-Thin helpers that abstract Alfred-specific behavior.
-These are **not** application logic — they wrap Alfred's environment.
-
-| Module | Purpose |
+| Directory | Role |
 |---|---|
-| `response.py` | Build and emit Script Filter JSON |
-| `router.py` | Parse query → dispatch to command |
-| `safe_run.py` | Catch exceptions → show error item |
-| `cache.py` | TTL disk cache via `alfred_workflow_cache` |
-| `config.py` | Persistent config via `alfred_workflow_data` |
-| `logger.py` | File logger to `~/Library/Logs/Alfred/Workflow/` |
+| `cmd/sequential-number-alfred/` | The binary Alfred invokes; recovers panics into a Script Filter error item and writes the response |
+| `internal/seqcmd/` | Query dispatch, argument parsing, preview/error item rendering — the Alfred result row(s) |
+| `internal/seq/` | Pattern expansion and sequence generation, unit tested independently of Alfred |
+| `internal/scriptfilter/` | Alfred Script Filter JSON response types |
+| `workflow/` | `info.plist` (the Alfred object graph), `icon.png` |
+| `scripts/build-workflow.sh` | Builds the universal binary and packages `workflow/` into `dist/*.alfredworkflow` |
+| `scripts/extract-changelog.sh` | Extracts one version's notes from `CHANGELOG.md` for GitHub Releases |
+| `docs/` | Specification, notes |
+| `docs/dev-charter/` | Shared dev-charter (`git subtree`) |
 
-### Application Layer (`src/app/`)
+## Key Dependencies
 
-Pure Python business logic — no Alfred dependency.
-This layer can be tested without Alfred and run from the CLI.
-
-| Directory | Purpose |
-|---|---|
-| `commands/` | One module per Alfred command. Each has `handle(args: str) -> None` |
-| `services/` | Business logic coordinating between commands and clients |
-| `clients/` | Thin HTTP/IO wrappers for external APIs |
-| `core.py` | Wires router to commands — the dependency injection point |
-
-## Query Parsing
-
-Alfred sends the full query string to the script.
-The router splits it into `<command> <args>`:
-
-```
-"search foo bar"  →  command="search",  args="foo bar"
-"open repo"       →  command="open",    args="repo"
-"config"          →  command="config",  args=""
-"foo bar"         →  command="search",  args="foo bar" (default fallback)
-```
-
-## Dependency Flow
-
-```
-commands → services → clients → external APIs
-         ↘
-           alfred SDK (response, cache, config, logger)
-```
-
-Commands depend on services, not clients directly.
-Services own caching logic.
-Clients are stateless HTTP wrappers.
-
-## Packaging
-
-At build time (`make build`):
-
-```
-.build/               ← temporary build directory
-├── info.plist        ← version synced from pyproject.toml
-├── icon.png
-├── scripts/
-│   └── entry.py
-├── src/              ← copied from repo src/
-│   ├── alfred/
-│   └── app/
-└── vendor/           ← pip install -r vendor-requirements.txt -t vendor/
-```
-
-The entire `.build/` directory is zipped to `dist/<name>-<version>.alfredworkflow`.
+None. `internal/seq` and `internal/seqcmd` use only the Go standard library
+(`strconv`, `strings`).
 
 ## Alfred Configuration Builder (`userconfigurationconfig`)
 
 Alfred 5 の Configuration Builder は `info.plist` の `userconfigurationconfig` キーで定義する。
 利用可能な全型・各キーの詳細は [`docs/configuration-builder.md`](configuration-builder.md) を参照。
 
-### Passing Variables
+This workflow declares no Config Builder variables — `userconfigurationconfig` is an
+empty array. (The Python implementation had a `use_uv` checkbox that selected between
+`uv run python` and `python3`; a compiled binary needs no such interpreter toggle, so
+it was removed in the Go rewrite.)
+
+### Passing variables
 
 Alfred はスクリプト実行時に各 `variable` を環境変数として渡す。
 インストール直後は `prefs.plist` が存在しないため変数は未セットになる場合がある。
-スクリプト側で常にデフォルト値を持たせること。
+将来スクリプト側で変数を読む場合は常にデフォルト値を持たせること。
 
-~~~python
-# Python
-value = os.environ.get("my_variable", "fallback")
-~~~
-
-~~~bash
-# Shell
-[ "${use_uv:-1}" = "1" ] && ...
+~~~go
+// Go
+value := os.Getenv("my_variable")
+if value == "" {
+	value = "fallback"
+}
 ~~~
 
 **注意:** `checkbox` 型の unchecked 値は `"0"` ではなく空文字 `""` になる。
 `[ "$var" = "1" ]` で判定し、`"0"` との比較は避けること。
 
-### Relationship Between `variables` / `prefs.plist` / `default`
+### Relationship between `variables` / `prefs.plist` / `default`
 
 | 場所 | 役割 |
 |---|---|

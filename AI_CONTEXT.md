@@ -1,38 +1,40 @@
-# AI_CONTEXT.md — alfred-workflow-template
+# AI_CONTEXT.md — alfred-sequential-number
 
 > このファイルは開発憲章（`docs/dev-charter/`）をこのプロジェクト向けにまとめたものです。
 > AIツールはセッション開始時にこのファイルを読むことで、憲章全体を参照しなくても
 > プロジェクトの方針を把握できます。
 
----
-
 ## Reference Order
 
 AI はタスク開始時に以下の順で参照する:
 
-1. README.md（概要・セットアップ）
-2. CONTRIBUTING.md（開発フロー・命名規則・レビューチェックリスト）
+1. `README.md`（概要・セットアップ）
+2. `DEVELOPING.md`（ビルド・実装規約・命名規則）
 
 必要に応じて以下を参照する（順不同）:
-- docs/architecture.md（モジュール・コンポーネント構造）
-- docs/file-map.md（ファイルレベルの依存関係 ※情報が足りない・古い場合は適宜探索し、追記・更新する）
-- docs/specification.md（機能仕様・データフロー）
-- docs/ui-design.md（UI 設計・コンポーネント仕様）
+- `CONTRIBUTING.md`（PR・Issue ルール）
+- `docs/architecture.md`（モジュール・コンポーネント構造）
+- `docs/file-map.md`（ファイルレベルの依存関係 ※情報が足りない・古い場合は適宜探索し、追記・更新する）
+- `docs/specification.md`（機能仕様・データフロー）
+- `docs/ui-design.md`（UI 設計・コンポーネント仕様）
+
+不明点は `docs/dev-charter/CHARTER_INDEX.md` → 該当ファイルの順で参照する。
 
 ---
 
 ## Project Overview
 
-Alfred 5 Script Filter ワークフロー用の OSS テンプレート。
-Python 3.11+、レイヤードアーキテクチャ、CI/CD 完備。
-対象: 個人〜3人規模の開発チーム。ライセンス: MIT。
+Alfred 5 Script Filter ワークフロー。連番を decimal/binary/octal/hex/alphabetic/カスタムフォーマット
+で生成してクリップボードにペーストする。Go（サードパーティ依存なし）、`cmd/`+`internal/` レイアウト、
+CI/CD 完備。対象: 個人〜3人規模の開発チーム。ライセンス: MIT。
 
 ```
-src/alfred/     ← Alfred SDK（response / router / cache / config / logger / safe_run）
-src/app/        ← アプリケーション層（commands / services / clients）
-workflow/       ← Alfred パッケージ（info.plist / scripts/entry.py / vendor/）
-tests/          ← pytest テストスイート
-scripts/        ← build.sh / dev.sh / release.sh / vendor.sh
+cmd/sequential-number-alfred/  ← Alfred が実行する唯一のバイナリ
+internal/seq/                  ← 数列生成ロジック（コア、stdlib のみ）
+internal/seqcmd/                ← クエリディスパッチ・プレビュー生成
+internal/scriptfilter/          ← Alfred Script Filter JSON 型
+workflow/                       ← Alfred パッケージ（info.plist / icon.png）
+scripts/                        ← build-workflow.sh / extract-changelog.sh
 ```
 
 詳細アーキテクチャ: `docs/architecture.md`
@@ -50,14 +52,12 @@ scripts/        ← build.sh / dev.sh / release.sh / vendor.sh
 
 ### Software Design Principles (SOFTWARE_DESIGN_PRINCIPLES)
 
-#### Basic Philosophy
 - **ローカルファースト** — Alfred ワークフローはオフラインで動作することを前提にする
 - **インフラ最小化** — サーバーレス、外部依存なし（vendor/ に完結）
 - **小さく始める** — 機能追加は必要性が確認されてから
 
-### Development Principles (PRINCIPLES)
+### Change Design Principles (PRINCIPLES)
 
-#### Code Design
 - **変更範囲は必要最小限** — Over-engineering しない
 - **YAGNI** — 今必要ない機能は実装しない
 - **DRY** — 2回の重複では抽象化しない。3回目で検討する
@@ -71,7 +71,7 @@ scripts/        ← build.sh / dev.sh / release.sh / vendor.sh
 - **Scope 厳守** — 会話のタスク・ゴールを AI が勝手に変更しない
 - **不明点は作業前に1回でまとめて質問する** — 重要な情報不足や曖昧さは質問する。軽微な不足は合理的な仮定で補い、仮定を明示する。推測で断定しない
 
-#### Required Pre-Coding Confirmation Items
+#### Required Confirmations Before Coding
 - ゴール（完了条件）
 - 言語・FW・バージョン制約
 - 新規 or 既存コード修正
@@ -89,11 +89,7 @@ scripts/        ← build.sh / dev.sh / release.sh / vendor.sh
 #### Working Stance
 - 大きな変更前に方針を説明してから着手する
 - **不要な依存追加禁止** — 既存の依存で解決できないか先に検討する
-
-#### Document Sync Rule
-
-仕様・ルール・構成に変更が生じたとき、変更と同じ作業内で関連ドキュメントを更新する。
-対象は docs/ 内のファイルに限らず、AI_CONTEXT.md・README.md 等のルートファイルも含む。
+- **ドキュメント同期** — 仕様・ルール・構成に変更が生じたとき、変更と同じ作業内で関連ドキュメントを更新する（対象: `docs/` 内ファイル、`AI_CONTEXT.md`、`README.md` 等）
 
 #### dev-charter Modification Rules
 
@@ -101,7 +97,7 @@ scripts/        ← build.sh / dev.sh / release.sh / vendor.sh
 
 - 変更が必要な場合は dev-charter リポジトリ本体に Issue を立て、`git subtree pull` でアップデートを取り込む
 - `git subtree pull` によるアップデートのみ許可する
-- プロジェクト固有のルールは、このファイル（`AI_CONTEXT.md`）または専用ファイルに記載する
+- このプロジェクト固有のルールは `AI_CONTEXT.md` または専用ファイルに記載する
 
 #### Charter Lookup
 
@@ -159,7 +155,6 @@ OSS プロジェクトのため、**公開面は英語を主言語**とする。
 - SSH 秘密鍵・クラウドトークン（gitleaks で検知）
 - ローカル絶対パスのハードコード（環境依存コードの防止。`.md`・`docs/` は allowlist で除外）
 - 500 KB を超えるファイル
-- Markdown の H2〜H6 見出しへの日本語使用（セクションヘッダは英語に統一）
 
 #### Manual Compliance Items
 - API キー・パスワードをコードに書かない（Alfred の暗号化キーチェーンを使う）
@@ -172,7 +167,7 @@ OSS プロジェクトのため、**公開面は英語を主言語**とする。
 - `main` に到達するコミットは可能な限り他の開発者がレビューする（個人開発の場合は PR を経由してセルフレビューする）
 - 認証・認可・暗号化・データアクセスに関わる変更はセキュリティレビューを必須とする
 
-詳細: `SECURITY.md`、`docs/dev-charter/SECURITY_POLICY.md`
+詳細: `CONTRIBUTING.md`（Security セクション）、`docs/dev-charter/SECURITY_POLICY.md`
 
 ### UI Guidelines (UI_GUIDELINES)
 
@@ -187,8 +182,8 @@ Alfred Script Filter のレスポンス（JSON items）に適用するルール:
 
 OSS プロジェクトのため、以下の方式を採用:
 
-- **Buy Me a Coffee**: https://www.buymeacoffee.com/YOUR_USERNAME
-- **GitHub Sponsors**: リポジトリの Sponsors 機能（`.github/FUNDING.yml` 設定済み。`YOUR_USERNAME` を実際の値に置き換えること）
+- **Buy Me a Coffee**: https://www.buymeacoffee.com/y.marui
+- **GitHub Sponsors**: リポジトリの Sponsors 機能（`.github/FUNDING.yml` 設定済み）
 
 README.md の末尾に Buy Me a Coffee バッジを掲載する。
 マネタイズを本格検討する場合は `MONETIZATION.md` を作成し、このファイルに概要を追記する。
@@ -208,120 +203,76 @@ Alfred ワークフローは現時点では UI テキストのローカライゼ
 
 ## Project-Specific Rules
 
-### Template-to-Project Migration (TEMPLATE_MIGRATION)
-
-このテンプレートから新しいワークフローを作成した場合、AI は以下の手順で `workflow/info.plist` を更新する。
-ユーザーから「テンプレートから移行する」「プロジェクトをセットアップする」などの指示を受けたときに実行する。
-
-#### How to Obtain Values
-
-| フィールド | 取得元 |
-|---|---|
-| `bundleid` | `com.github.<owner>.<repo>` — `git remote get-url origin` から owner/repo を取得 |
-| `description` | `gh repo view <owner>/<repo> --json description --jq '.description'` |
-| `createdby` | `git config user.name` |
-| `category` | ユーザーに選択肢を提示して確認する（下記参照） |
-| `webaddress` | `https://github.com/<owner>/<repo>` |
-
-#### Category Options
-
-Alfred が受け付ける category 文字列:
-
-- `Tools & Utilities`
-- `Internet`
-- `Files & Folders`
-- `Productivity`
-- `Communication`
-- `Music & Audio`
-- `System`
-- `Games`
-- `Academic`
-- `Development`
-
-ユーザーにワークフローの用途を聞き、最も適切な category を提案して確認を取る。
-
-#### Update Procedure
-
-`/usr/libexec/PlistBuddy` を使って `workflow/info.plist` を直接編集する。
-`category` キーは info.plist に存在しない場合があるため、存在しなければ `Add`、存在すれば `Set` を使う。
-
----
-
 ### Architecture Constraints
 
-- `workflow/scripts/entry.py` は Alfred が実行する**唯一のファイル**。ビジネスロジックを書かない
-- `src/alfred/` は Alfred SDK ヘルパーのみ — アプリケーションロジックは不可
-- Commands → Services → Clients の順に呼ぶ。レイヤーをスキップしない
-- すべての `output()` 呼び出しは `alfred.response.output()` を経由する
-- `main()` は必ず `safe_run()` でラップする（未捕捉例外 = Alfred が空白表示になる）
+- `cmd/sequential-number-alfred/main.go` は Alfred が実行する**唯一のバイナリ**。ビジネスロジックを書かない
+- `internal/seqcmd/` はクエリディスパッチ・プレビュー生成のみ — 数列生成ロジックは `internal/seq/` に置く
+- `internal/seq/` は Alfred 非依存の純粋ロジック — stdlib のみ使用し、単体でテスト可能に保つ
+- すべての応答は `internal/scriptfilter.Response.Write()` を経由する
+- `main()` は panic を `recover()` でラップする（未捕捉 panic = Alfred が空白表示になる）
 
 ### Testing Conventions
 
-- `src/app/`（commands / services / clients）をテスト対象とする — 純粋 Python
-- `ApiClient` 内の外部 API 呼び出しはモックする。テストで実際の HTTP 通信をしない
-- `conftest.py` が Alfred 環境変数を tmp ディレクトリに自動設定する
-- Alfred SDK ヘルパーのテストは `tests/test_alfred.py`
+- `internal/seq/`・`internal/seqcmd/` をテスト対象とする（`go test ./...`）
+- 外部 I/O は行わない — `internal/seq` は stdlib のみ使用する純粋関数
+- Alfred 環境変数への依存はない（Config Builder 変数を現在持たない）
 
-### Python Development Environment (PYTHON_TOOLCHAIN)
+詳細な開発フロー・命名規則・コードレビュー手順は `DEVELOPING.md` を参照する。
+
+### Go Development Environment (GO_TOOLCHAIN)
 
 | 役割 | ツール |
 |---|---|
-| Python バージョン管理 | pyenv |
-| パッケージ管理・仮想環境・スクリプト実行 | uv |
-| Linter / Formatter | ruff |
-| 型チェック | mypy（strict モード） |
-| テスト | pytest |
+| Go バージョン管理 | `go.mod` の `go` ディレクティブに従う |
+| Linter / Formatter | `gofmt` + `go vet` |
+| テスト | `go test` |
+| 依存管理 | 標準の `go.mod`（サードパーティ依存は原則追加しない） |
 
-新しい Python プロジェクトを立ち上げる場合、または依存関係を変更する場合はこのツールチェーンに従う。
+新しい Go コードを追加する場合、または依存関係を変更する場合はこのツールチェーンに従う。
 
-### Alfred Runtime Environment (RUNTIME)
+### Alfred Runtime (RUNTIME)
 
-Alfred からスクリプトを実行する際は `use_uv` 変数で実行方法を切り替える。
+Alfred は Script Filter ノードからユニバーサル（amd64+arm64）バイナリを直接実行する。
+インタプリタ選択や実行時ラッパースクリプトは不要。
 
-- `use_uv` は Config Builder の checkbox（デフォルト: ON）として定義する
-- **ON かつ `uv` が PATH に存在する場合**: `uv run python` で実行
-- **OFF または `uv` が存在しない場合**: `python3` で実行
-
-`workflow/scripts/entry.py` を呼ぶスクリプト行のパターン:
+`workflow/info.plist` の Script Filter ノードの `script` キー:
 
 ```bash
-[ "${use_uv:-1}" = "1" ] && command -v uv >/dev/null 2>&1 && exec uv run python scripts/entry.py "$1" || exec python3 scripts/entry.py "$1"
+./sequential-number-alfred "$1"
 ```
 
 ### Configuration Management (CONFIG_BUILDER)
 
 - **ユーザーが設定する値はすべて Config Builder に入れる** — `workflow/info.plist` の `userconfigurationconfig` 配列に追加する
 - Alfred の `variables` キー（environment variable）は使わない。Config Builder で代替できる場合は必ず Config Builder を使う
-- Config Builder の値は Alfred がスクリプト実行時に環境変数として自動で渡すため、スクリプト側では `os.environ` で読める
+- Config Builder の値は Alfred がスクリプト実行時に環境変数として自動で渡すため、スクリプト側では `os.Getenv()` で読める
 - 新しい設定項目を追加するときは以下の型から選ぶ: `textfield` / `checkbox` / `select` / `file` / `password`
+- 現在このワークフローに Config Builder 変数はない（`userconfigurationconfig` は空配列）
 
 ### Code Style
 
 - コメントは **「なぜそうするか」のみ** 書く。コードから自明な処理には書かない
-- ruff（linter）+ ruff format（formatter）、行長 100
-- すべての public 関数に型ヒント必須
-- 各モジュール先頭に `from __future__ import annotations`
-- mypy strict モード（`pyproject.toml` 参照）
+- `gofmt` + `go vet`。CI で強制する
+- すべての exported 関数・型に doc コメントを検討する（自明でないもののみ）
+
+命名規則・コミットメッセージ形式・PR チェックリストは `CONTRIBUTING.md` を参照する。
 
 ### Performance
 
-- Script Filter のレスポンスタイム目標: **100ms 未満**
-- ネットワーク呼び出しには `alfred.cache.Cache` を使用する
-- キャッシュ TTL デフォルト: 300s（5分）
+- Script Filter のレスポンスタイム目標: **100ms 未満**（コンパイル済みバイナリのため通常余裕がある）
 
 ### Dependency Management
 
-- ランタイム依存 → `vendor-requirements.txt` → `workflow/vendor/` にベンダリング（`make vendor`）
-- 開発依存 → `pyproject.toml [project.optional-dependencies.dev]`
-- ランタイム依存は最小限に保つ（パッケージ追加 = ワークフローサイズ増加）
+- サードパーティ依存の追加は原則禁止（`go.mod` は依存なしを維持）
+- ランタイム依存は最小限に保つ（パッケージ追加 = ワークフローサイズ・起動時間の増加）
 
 ---
 
 ## AI Tool Assignments
 
-- **使用ツール**：Claude Code、Codex、GitHub Copilot、Gemini CLI
-- **標準担当の正本**：`docs/dev-charter/AI_COLLABORATION_RULES.md` の「AI Tool Responsibilities」と「Rules for Multi-AI Usage」
-- **プロジェクト固有の上書き**：なし
+- **使用ツール**: Claude Code、Codex、GitHub Copilot、Gemini CLI
+- **標準担当の正本**: `docs/dev-charter/AI_COLLABORATION_RULES.md` の「AI Tool Responsibilities」と「Rules for Multi-AI Usage」
+- **プロジェクト固有の上書き**: なし
 
 ---
 
@@ -329,10 +280,9 @@ Alfred からスクリプトを実行する際は `use_uv` 変数で実行方法
 
 - シークレット・認証情報・`.env` ファイルのコミット
 - pre-commit フックのスキップ（`--no-verify` 禁止）
-- `workflow/scripts/entry.py` へのビジネスロジックの追加
-- レイヤーをスキップした呼び出し（例: Command が Client を直接呼ぶ）
+- `cmd/sequential-number-alfred/main.go` へのビジネスロジックの追加
 - テストでの実際の HTTP 通信
-- デバッグ用 `print` 文の本番コードへの残置
+- デバッグ用 `fmt.Print*` 文の本番コードへの残置
 - Alfred 結果アイテムへの Unicode 絵文字の使用
 - ハードコードされた絶対パス（`$HOME` を使う）
 - Config Builder で代替できる設定を Alfred の `variables` キー（environment variable）に直接書くこと
@@ -341,33 +291,9 @@ Alfred からスクリプトを実行する際は `use_uv` 変数で実行方法
 
 ---
 
-## Development Commands
+## Development Commands and Release Process
 
-```bash
-make install          # dev 依存関係をインストール
-make run Q="search foo"  # Alfred をローカルでシミュレート
-make test             # テスト実行
-make lint             # ruff チェック
-make format           # ruff format（フォーマット適用）
-make typecheck        # mypy
-make build            # dist/*.alfredworkflow を生成
-make vendor           # workflow/vendor/ を更新
-```
-
-### Steps to Add a New Command
-
-1. `src/app/commands/my_cmd.py` を作成（`handle(args: str) -> None` を実装）
-2. `src/app/core.py` に登録: `router.register("my")(my_cmd.handle)`
-3. `tests/test_commands.py` にテストを追加
-
-## Release Procedure
-
-```bash
-# pyproject.toml のバージョンを更新
-git tag v1.2.3
-git push --tags
-# GitHub Actions が .alfredworkflow を生成して GitHub Release を作成
-```
+開発フロー・コマンド一覧・リリース手順は `CONTRIBUTING.md` を参照する。
 
 ---
 
