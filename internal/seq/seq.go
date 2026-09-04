@@ -46,7 +46,14 @@ func convertAlphabet(n int, letters string) (string, error) {
 			s = append([]byte{letters[m]}, s...)
 		} else {
 			n, m = n/27, n%27
-			s = append([]byte{letters[m-1]}, s...)
+			// Python indexes ascii_uppercase[m-1], where negative
+			// indexing wraps m==0 to the last letter ('Z'/'z'); Go has
+			// no such wraparound, so it must be done explicitly.
+			idx := m - 1
+			if idx < 0 {
+				idx += len(letters)
+			}
+			s = append([]byte{letters[idx]}, s...)
 		}
 	}
 	return string(s), nil

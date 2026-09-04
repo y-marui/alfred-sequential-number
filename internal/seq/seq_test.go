@@ -13,6 +13,7 @@ func TestConvertAlphabetLower(t *testing.T) {
 		{1, "a"},
 		{26, "z"},
 		{27, "aa"},
+		{703, "aza"},
 	}
 	for _, c := range cases {
 		got, err := ConvertAlphabetLower(c.n)
@@ -39,6 +40,18 @@ func TestConvertAlphabetUpper(t *testing.T) {
 		{1, "A"},
 		{26, "Z"},
 		{27, "AA"},
+		// Boundary around the m==0 case, where the original Python
+		// implementation relies on negative-index wraparound
+		// (ascii_uppercase[-1] == "Z"); verified against the original
+		// convert_Alphabet(n) before it was removed.
+		{700, "ZX"},
+		{701, "ZY"},
+		{702, "ZZ"},
+		{703, "AZA"},
+		{704, "AZB"},
+		{730, "AAB"},
+		{731, "AAC"},
+		{18278, "ZZZ"},
 	}
 	for _, c := range cases {
 		got, err := ConvertAlphabetUpper(c.n)

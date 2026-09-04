@@ -78,6 +78,21 @@ func TestAlphaLower(t *testing.T) {
 	}
 }
 
+// TestAlphaLowerBeyondZZ regression-tests the m==0 boundary in
+// internal/seq.convertAlphabet (703 == "aza"): the naive Go port of
+// Python's ascii_lowercase[m-1] panicked here because Python's negative
+// indexing silently wraps m==0 to the last letter.
+func TestAlphaLowerBeyondZZ(t *testing.T) {
+	title, _, arg, valid := firstItem(t, "alf 703")
+	if !valid {
+		t.Fatalf("Dispatch(%q): item is not valid (title=%q)", "alf 703", title)
+	}
+	got := values(t, arg)
+	if got[len(got)-1] != "aza" {
+		t.Errorf("Dispatch(%q) last value = %q, want %q", "alf 703", got[len(got)-1], "aza")
+	}
+}
+
 func TestAlphaUpper(t *testing.T) {
 	assertValues(t, "Alf 3", []string{"A", "B", "C"})
 	got := values(t, itemArg(t, "Alf 27"))
