@@ -111,7 +111,8 @@ repos:
   # ----------------------------------------------------------------
   # Block commits on the default branch
   # (server-side Ruleset only stops direct pushes; this catches local
-  # commits onto main/master before that point — see SECURITY_POLICY.md)
+  # commits onto main/master before that point — see CI_POLICY.md
+  # Branch Protection (Ruleset))
   # ----------------------------------------------------------------
   - repo: local
     hooks:

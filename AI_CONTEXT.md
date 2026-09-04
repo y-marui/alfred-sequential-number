@@ -31,10 +31,10 @@ CI/CD 完備。対象: 個人〜3人規模の開発チーム。ライセンス: 
 ```
 cmd/sequential-number-alfred/  ← Alfred が実行する唯一のバイナリ
 internal/seq/                  ← 数列生成ロジック（コア、stdlib のみ）
-internal/seqcmd/                ← クエリディスパッチ・プレビュー生成
-internal/scriptfilter/          ← Alfred Script Filter JSON 型
-workflow/                       ← Alfred パッケージ（info.plist / icon.png）
-scripts/                        ← build-workflow.sh / extract-changelog.sh
+internal/seqcmd/               ← クエリディスパッチ・プレビュー生成
+internal/scriptfilter/         ← Alfred Script Filter JSON 型
+workflow/                      ← Alfred パッケージ（info.plist / icon.png）
+scripts/                       ← build-workflow.sh / extract-changelog.sh
 ```
 
 詳細アーキテクチャ: `docs/architecture.md`
