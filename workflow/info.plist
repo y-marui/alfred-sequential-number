@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.github.y-marui.alfred-sequential-number</string>
+	<string>com.y-marui.alfred-sequential-number</string>
 	<key>category</key>
 	<string>Tools &amp; Utilities</string>
 	<key>connections</key>
