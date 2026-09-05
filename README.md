@@ -22,6 +22,8 @@ Download the latest `.alfredworkflow` from [GitHub Releases](https://github.com/
 
 ## Usage
 
+Generate sequential numbers via the `seq` keyword.
+
 ### `seq`
 ```
 seq <length or range>
