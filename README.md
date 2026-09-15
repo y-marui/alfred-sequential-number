@@ -24,6 +24,8 @@ Download the latest `.alfredworkflow` from [GitHub Releases](https://github.com/
 
 Generate sequential numbers via the `seq` keyword.
 
+![seq 10 result](images/seq.png)
+
 ### `seq`
 ```
 seq <length or range>
