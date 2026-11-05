@@ -1,6 +1,6 @@
 # Alfred Sequential Number
 
-> **これは日本語版（正本）です。**
+> **このファイルは正本（日本語版）です。**
 > 英語版（参照）は [README.md](README.md) を参照してください。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -19,6 +19,19 @@ Alfred で連番を生成してクリップボードに貼り付けるワーク�
 ## Installation
 
 [GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) から最新の `.alfredworkflow` をダウンロードしてダブルクリックでインストールします。
+
+## Project Structure
+
+```
+alfred-sequential-number/
+├── cmd/
+│   └── sequential-number-alfred/  # Alfred が実行するバイナリ
+├── internal/
+│   ├── seq/             # 連番生成ロジック（コア）
+│   ├── seqcmd/           # クエリディスパッチ・フォーマット/サブコマンドルーティング
+│   └── scriptfilter/    # Alfred Script Filter JSON 型
+└── workflow/             # Alfred パッケージ（info.plist, icon.png）
+```
 
 ## Usage
 
@@ -114,6 +127,15 @@ seq fmt 3 Sample-#a
 | `%a`, `#a` | アルファベット（小文字）: a, b, c, ... |
 | `%A`, `#A` | アルファベット（大文字）: A, B, C, ... |
 
+## Documentation
+
+| ドキュメント | 内容 |
+|---|---|
+| [docs/specification.md](docs/specification.md) | 機能仕様とデータフロー |
+| [docs/architecture.md](docs/architecture.md) | アーキテクチャとレイヤー設計 |
+| [docs/ui-design.md](docs/ui-design.md) | Alfred 結果アイテムの UI 規約 |
+| [docs/file-map.md](docs/file-map.md) | ファイル単位の依存関係 |
+
 ## Development
 
 ```bash
@@ -122,23 +144,9 @@ make lint             # gofmt -l + go vet
 make build-workflow   # dist/*.alfredworkflow を生成
 ```
 
-## Project Structure
-
-```
-alfred-sequential-number/
-├── cmd/
-│   └── sequential-number-alfred/  # Alfred が実行するバイナリ
-├── internal/
-│   ├── seq/             # 連番生成ロジック（コア）
-│   ├── seqcmd/           # クエリディスパッチ・フォーマット/サブコマンドルーティング
-│   └── scriptfilter/    # Alfred Script Filter JSON 型
-└── workflow/             # Alfred パッケージ（info.plist, icon.png）
-```
-
 ## License
 
 MIT — [LICENSE](LICENSE) を参照
 
 ---
-
-*この文書には英語版（参照版）[README.md](README.md) があります。編集時は同一コミットで更新してください。*
+*この文書には英語版 [README.md](README.md) があります。編集時は同一コミットで更新してください。*

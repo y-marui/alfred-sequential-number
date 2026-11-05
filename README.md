@@ -1,7 +1,7 @@
 # Alfred Sequential Number
 
-> **This is the English (reference) version.**
-> For the Japanese canonical version, see [README-jp.md](README-jp.md).
+> **This is the reference (English) version.**
+> The canonical (Japanese) version is [README-jp.md](README-jp.md).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml/badge.svg)](https://github.com/y-marui/alfred-sequential-number/actions/workflows/ci.yml)
@@ -19,6 +19,19 @@ An Alfred workflow to generate sequential numbers and paste them to the clipboar
 ## Installation
 
 Download the latest `.alfredworkflow` from [GitHub Releases](https://github.com/y-marui/alfred-sequential-number/releases) and double-click to install.
+
+## Project Structure
+
+```
+alfred-sequential-number/
+├── cmd/
+│   └── sequential-number-alfred/  # The binary Alfred invokes
+├── internal/
+│   ├── seq/             # Sequence generation logic (core)
+│   ├── seqcmd/           # Query dispatch, format/subcommand routing
+│   └── scriptfilter/    # Alfred Script Filter JSON types
+└── workflow/             # Alfred package (info.plist, icon.png)
+```
 
 ## Usage
 
@@ -114,6 +127,15 @@ Generate sequential values with a custom format string (default format: `item-#`
 | `%a`, `#a` | alphabetic lower case: a, b, c, ... |
 | `%A`, `#A` | alphabetic upper case: A, B, C, ... |
 
+## Documentation
+
+| Document | Description |
+|---|---|
+| [docs/specification.md](docs/specification.md) | Functional specification and data flow |
+| [docs/architecture.md](docs/architecture.md) | Architecture and layer design |
+| [docs/ui-design.md](docs/ui-design.md) | Alfred result item UI conventions |
+| [docs/file-map.md](docs/file-map.md) | File-level dependency map |
+
 ## Development
 
 ```bash
@@ -122,23 +144,9 @@ make lint             # gofmt -l + go vet
 make build-workflow   # build dist/*.alfredworkflow
 ```
 
-## Project Structure
-
-```
-alfred-sequential-number/
-├── cmd/
-│   └── sequential-number-alfred/  # The binary Alfred invokes
-├── internal/
-│   ├── seq/             # Sequence generation logic (core)
-│   ├── seqcmd/           # Query dispatch, format/subcommand routing
-│   └── scriptfilter/    # Alfred Script Filter JSON types
-└── workflow/             # Alfred package (info.plist, icon.png)
-```
-
 ## License
 
 MIT — see [LICENSE](LICENSE)
 
 ---
-
-*This is the reference (English) version. The canonical Japanese version is [README-jp.md](README-jp.md). Update both files in the same commit.*
+*This document has a Japanese canonical version [README-jp.md](README-jp.md). Update both in the same commit when editing.*
